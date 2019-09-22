@@ -12,65 +12,95 @@
         <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
       </a>
       <ul>
-        <li><a href="">Студия</a></li>
-        <li><a href="">Клиенты</a></li>
+        <li><a href="#">Студия</a></li>
+        <li><a href="#">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="">Контакты</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Корзина</a></li>
       </ul>
-      <a href="">Корзина</a>
     </nav>
   </header>
 
   <main>
-
     <h1>Магазин готовых шаблонов</h1>
 
     <section>
-        <!-- Как я понимаю, этот раздел должен быть формой, но пока просто разметка -->
-        <h2>Фильтр товаров</h2>
+        <h2 class="visually-hidden">Фильтр товаров</h2>
 
-        <ul>
-          <li><h3>Стоимость</h3></li>
-          <!--Здесь слайдер цены-->
+        <!-- В этом задании делать не нужно.
+        Здесь слайдер цены-->
 
+      <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+                <label for="filter-adaptive">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" name="product-group" value="fix" id="filter-fix">
+                <label for="filter-fix">Фиксированная</label>
+              </li>
+              <li>
+                <input type="radio" name="product-group" value="rubber" id="filter-rubber">
+                <label for="filter-rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Особенности</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" name="benefits-block" id="filter-benefits-block">
+                <label for="filter-benefits-block">Блок преимуществ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="news" id="filter-news" checked>
+                <label for="filter-news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" name="gallery" id="filter-gallery">
+                <label for="filter-gallery">Галерея</label>
+              </li>
+
+              <li>
+                <input type="checkbox" name="garbage" id="filter-garbage">
+                <label for="filter-garbage">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button type="submit">Показать</button>
+        </form>
+
+        <!-- Вопрос! "Сортировать" относится к форме, которая уже есть,
+              или как что-то отдельное?
+
+             1-й вариант (считаю нужным сделать так): оставить в этом section, но
+                          не в форме
+             2-й варрант: запихнуть в эту форму отдельным fieldset
           <li>
             <h3>Cортировка</h3>
             <ul>
               <li><a href="#">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По названию</a></li>
-              <li><a href="#"><img src="img/icon-down-dir.svg"></a></li> <!-- треугольничек сортировки по убыванию -->
-              <li><a href="#"><img src="img/icon-up-dir.svg"></a></li> <!-- треугольничек сортировки по возрастанию -->
+              <li><a href="#"><img src="img/icon-down-dir.svg"></a></li>  треугольничек сортировки по убыванию
+              <li><a href="#"><img src="img/icon-up-dir.svg"></a></li> треугольничек сортировки по возрастанию
             </ul>
           </li>
-
-          <li>
-            <h3>Сетка:</h3>
-            <ul>
-              <li>Адаптивная</li>
-              <li>Фиксированная</li>
-              <li>Резиновая</li>
-            </ul>
-          </li>
-
-          <li>
-            <h3>Особенности:</h3>
-            <ul>
-              <li>Слайдер</li>
-              <li>Блок преимуществ</li>
-              <li>Новости</li>
-              <li>Галерея</li>
-              <li>Корзина</li>
-            </ul>
-          </li>
-
-          <li><button type="button">Показать</button></li>
-
-      </ul>
+          -->
     </section>
 
     <section>
-      <h2>Галерия товаров</h2>
+      <h2 class="visually-hidden">Галерия товаров</h2>
+
       <ul>      <!-- Если же кликая по товару мы переходим на сам сайт, то необходим тег <a> -->
         <li><img src="img/img-sedona.jpg"></li>
         <li><img src="img/img-pink.jpg"></li>
@@ -87,18 +117,62 @@
         <li><a href="#">Следующая</a></li>
       </ul>
     </section>
-
   </main>
-  <footer>
-    <ul>
-      <li><a href="#">Вконтакте</a></li>
-      <li><a href="#">Фейсбук</a></li>
-      <li><a href="#">Инстаграмм</a></li>
-    </ul>
 
-    <p><span>Давайте дружить, это выгодно!</span>
-      Скидка 10% для друзей из социальных сетей.</p>
+  <footer>
+    <section>
+      <h2 class="visually-hidden">Как нас найти?</h2>
+
+      <p>
+        <span>NЁRDS DESIGN STUDIO</span>
+
+        191186, Санкт-Петербург,
+        ул. Б. Конюшенная, д. 19/8
+        тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+      </p>
+      <button type="button">Напишите нам</button>
+
+      <img src="img/map.png" alt="Карта" width="1440px" height="416px">
+      <img src="img/map-marker.png" alt="Карта" width="231px" height="190px">
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <ul>
+        <li><a href="#">Вконтакте</a></li>
+        <li><a href="#">Фейсбук</a></li>
+        <li><a href="#">Инстаграмм</a></li>
+      </ul>
+
+      <p><span>Давайте дружить, это выгодно!</span>
+        Скидка 10% для друзей из социальных сетей.</p>
+    </section>
   </footer>
+
+
+  <section>
+    <h2>Напишите нам</h2>
+    <!--<a href="#"><img src="img/close-cross.svg" aria-label="Закрыть"></a>-->
+
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="send-name">Ваше имя:</label>
+        <input type="text" name="name" id="send-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="send-email">Ваш e-mail:</label>
+        <input type="email" name="email" id="send-email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="send-message">Текст письма:</label>
+        <!-- можно подумать насчёт textarea!!! -->
+        <input type="text" name="message" id="send-message" placeholder="В свободной форме">
+      </p>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
 
 </body>
 </html>

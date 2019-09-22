@@ -12,21 +12,20 @@
         <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
       </a>
       <ul>
-        <li><a href="">Студия</a></li>
-        <li><a href="">Клиенты</a></li>
+        <li><a href="#">Студия</a></li>
+        <li><a href="#">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="">Контакты</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Корзина</a></li>
       </ul>
-      <!-- полагаем, что корзина - отдельная страница, а не всплывающее окно -->
-      <a href="">Корзина</a>
     </nav>
   </header>
-  <main>
 
-    <h1>Дизайн-студия «Нёрдс»</h1>
+  <main>
+    <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
 
     <section>
-      <h2>Превью</h2> <!-- не думаю, что это лучшее оглавления этого section -->
+      <h2 class="visually-hidden">Превью</h2> <!-- не думаю, что это лучшее оглавления этого section -->
 
       <img src="img/slide-1.png" alt="Ваше мобильное приложение" width="698px" height="413px">
       <p>
@@ -38,7 +37,7 @@
     </section>
 
     <section>
-      <h2>Каталог услуг</h2>
+      <h2 class="visually-hidden">Каталог услуг</h2>
 
       <ul>
         <li>
@@ -65,7 +64,7 @@
     </section>
 
     <section>
-      <h2>Информация о нас</h2>
+      <h2 class="visually-hidden">Информация о нас</h2>
 
       <p>
         <span>Мы - маленькая, но гордая дизайн-студия из Краснодара.</span>
@@ -90,7 +89,7 @@
     </section>
 
     <section>
-      <h2>Наши работы</h2>
+      <h2 class="visually-hidden">Наши работы</h2>
 
       <ul>
         <li><a href="#"><img src="img/logo-1.png" alt="Html Academy" width="199px" height="68px"></a></li>
@@ -99,34 +98,60 @@
         <li><a href="#"><img src="img/logo-4.png" alt="Mishka" width="173px" height="84px"></a></li>
       </ul>
     </section>
+  </main>
 
+  <footer>
     <section>
-      <h2>Как нас найти?</h2>
+      <h2 class="visually-hidden">Как нас найти?</h2>
 
       <p>
-        <b>NЁRDS DESIGN STUDIO</b>
+        <span>NЁRDS DESIGN STUDIO</span>
 
         191186, Санкт-Петербург,
         ул. Б. Конюшенная, д. 19/8
         тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
       </p>
-      <button type="button">Напишите нам</button>
+      <a href="#">Напишите нам</a>
 
       <img src="img/map.png" alt="Карта" width="1440px" height="416px">
       <img src="img/map-marker.png" alt="Карта" width="231px" height="190px">
     </section>
 
-  </main>
-  <footer>
-    <ul>
-      <li><a href="#">Вконтакте</a></li>
-      <li><a href="#">Фейсбук</a></li>
-      <li><a href="#">Инстаграмм</a></li>
-    </ul>
+    <section>
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <ul>
+        <li><a href="#">Вконтакте</a></li>
+        <li><a href="#">Фейсбук</a></li>
+        <li><a href="#">Инстаграмм</a></li>
+      </ul>
 
-    <p><span>Давайте дружить, это выгодно!</span>
-      Скидка 10% для друзей из социальных сетей.</p>
+      <p><span>Давайте дружить, это выгодно!</span>
+        Скидка 10% для друзей из социальных сетей.</p>
+    </section>
   </footer>
+
+  <section class="visually-hidden">
+    <h2>Напишите нам</h2>
+    <!--<a href="#"><img src="img/close-cross.svg" aria-label="Закрыть"></a>-->
+
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="send-name">Ваше имя:</label>
+        <input type="text" name="name" id="send-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="send-email">Ваш e-mail:</label>
+        <input type="email" name="email" id="send-email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="send-message">Текст письма:</label>
+        <!-- можно подумать насчёт textarea!!! -->
+        <input type="text" name="message" id="send-message" placeholder="В свободной форме">
+      </p>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
 
 </body>
 </html>
