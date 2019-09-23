@@ -27,10 +27,18 @@
     <section>
         <h2 class="visually-hidden">Фильтр товаров</h2>
 
-        <!-- В этом задании делать не нужно.
-        Здесь слайдер цены-->
+        <form action="https://echo.htmlacademy.ru" method="get">
 
-      <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Стоимость</legend>
+
+            <input type="range" name="cost" id="filter-range-cost">
+            <p>
+              От <span>0</span> до <span>15 000</span>
+            </p>
+          </fieldset>
+
+
           <fieldset>
             <legend>Сетка:</legend>
             <ul>
@@ -78,30 +86,25 @@
 
           <button type="submit">Показать</button>
         </form>
+    </section>
 
-        <!-- Вопрос! "Сортировать" относится к форме, которая уже есть,
-              или как что-то отдельное?
+    <section>
+      <h2>Сортировать</h2>
 
-             1-й вариант (считаю нужным сделать так): оставить в этом section, но
-                          не в форме
-             2-й варрант: запихнуть в эту форму отдельным fieldset
-          <li>
-            <h3>Cортировка</h3>
-            <ul>
-              <li><a href="#">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По названию</a></li>
-              <li><a href="#"><img src="img/icon-down-dir.svg"></a></li>  треугольничек сортировки по убыванию
-              <li><a href="#"><img src="img/icon-up-dir.svg"></a></li> треугольничек сортировки по возрастанию
-            </ul>
-          </li>
-          -->
+      <ul>
+        <li><a href="#">По цене</a></li>
+        <li><a href="#">По типу</a></li>
+        <li><a href="#">По названию</a></li>
+        <li><a href="#"><img src="img/icon-down-dir.svg" aria-label="Сортировка по убыванию"></a></li>
+        <li><a href="#"><img src="img/icon-up-dir.svg" aria-label="Сортировка по возрастанию"></a></li>
+      </ul>
     </section>
 
     <section>
       <h2 class="visually-hidden">Галерия товаров</h2>
 
-      <ul>      <!-- Если же кликая по товару мы переходим на сам сайт, то необходим тег <a> -->
+      <ul>
+        <!-- Если же кликая по товару мы переходим на сам сайт, то необходим тег <a> -->
         <li><img src="img/img-sedona.jpg"></li>
         <li><img src="img/img-pink.jpg"></li>
         <li><img src="img/img-barbershop.jpg"></li>
