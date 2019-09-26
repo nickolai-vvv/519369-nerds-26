@@ -1,0 +1,253 @@
+body{
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  color: #283136;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  text-align: center;
+  vertical-align: center;
+
+  color: #ffffff;
+  background-color: #fb565a;
+  border: 0;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: #e74246;
+}
+
+.site-header-navigation{
+  font-size: 16px;
+  font-weight: 700; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
+  line-height: 30px;
+  text-transform: uppercase;
+
+  background-color: #eeeeee;
+  /*Возникает вопрос: а нужно ли ?
+    Или это только тогда, когда есть какая-то текстура
+    Мое мнение, что здесь просто заливка цветом и картинка фоновая не нужна*/
+  /*background-image: url("../img/grey-back.png"); */
+  /*background-position: 0 0;*/
+  /*background-repeat: repeat;*/
+}
+
+.site-header-navigation ul {
+  list-style: none;
+}
+
+.site-header-navigation a{
+  color: #000000;
+}
+
+.site-header-navigation a:hover,
+.site-header-navigation a:focus {
+  color: #fb565a;
+}
+
+.site-header-navigation a:active{
+  color: #000000;
+}
+
+/*
+Как лучше?
+так       .site-header-navigation-current
+или так   .site-header-navigation .current   ?*/
+.site-header-navigation .current {
+  /*Здесь будет создана полосочка нажатого элемента*/
+}
+
+.advantages{
+  color: #000000;
+}
+
+.advantages h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.advantages ul{
+  list-style: none;
+}
+
+.button-red-advantages {
+
+}
+
+.button-green-advantages{
+  background-color: #00ca74;
+}
+
+.button-green-advantages:hover,
+.button-green-advantages:focus {
+  background-color: #00bc6c;
+}
+
+.button-yellow-advantages{
+  background-color: #efc84a;
+}
+
+.button-yellow-advantages:hover,
+.button-yellow-advantages:focus {
+  background-color: #eab534;
+}
+
+.header-catalog{
+  text-align: center;
+  vertical-align: center;
+
+  background-color: #eeeeee;
+}
+
+.header-catalog h1{
+  color: #000000;
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+}
+
+.range-value{
+  width: 80px;
+  height: 38px;
+
+  text-align: center;
+  vertical-align: center;
+
+  background-color: #eeeeee;
+}
+
+.filter{
+  color: #283136;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.filter fieldset{
+  border: none;
+}
+
+.filter legend{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05px;
+}
+
+.filter ul{
+  list-style: none;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #283136;
+}
+
+.filter-input:disabled + label {
+  color: #283132;
+  opacity: 0.3;
+}
+
+.filter-button{
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
+  background-color: #dfdfdf;
+}
+
+.gallery ul{
+  list-style: none;
+}
+
+.map{
+  color: #666666;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.map .telephone{
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.map .span-name{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.social{
+  color: #444444;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.social .span-offer{
+  color: #000000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.social ul{
+  list-style: none;
+}
+
+.social a{
+  color: #000000;
+  font-weight: 700; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.social a{
+  color: #000000;
+}
+
+.social a:hover,
+.social a:focus {
+  color: #fb565a;
+}
+
+.social a:active{
+  color: #000000;
+}

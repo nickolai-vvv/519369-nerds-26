@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Дизайн-студия «Нёрдс»</title>
+  <meta charset="utf-8">
+  <title>Дизайн-студия «Нёрдс»</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href=https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <nav>
-      <a href="index.html">
+    <nav class="site-header-navigation">
+      <a class="header-logo" href="index.html">
         <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
       </a>
-      <ul>
+      <ul class="site-header-navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
-        <li><a href="#">Корзина</a></li>
       </ul>
+      <a href="#">Корзина</a>
     </nav>
   </header>
 
   <main>
-    <h1>Магазин готовых шаблонов</h1>
+    <div class="header-catalog">
+      <h1>Магазин готовых шаблонов</h1>
+    </div>
 
-    <section>
+    <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
 
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
 
           <fieldset>
-            <legend>Стоимость</legend>
+            <legend>Стоимость:</legend>
 
             <input type="range" name="cost" id="filter-range-cost">
             <p>
-              От <span>0</span> до <span>15 000</span>
+              <!-- div или span? -->
+              ОТ <span class="range-value">0</span> ДО <span class="range-value">15 000</span>
             </p>
           </fieldset>
 
@@ -42,16 +48,16 @@
           <fieldset>
             <legend>Сетка:</legend>
             <ul>
-              <li>
-                <input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
                 <label for="filter-adaptive">Адаптивная</label>
               </li>
-              <li>
-                <input type="radio" name="product-group" value="fix" id="filter-fix">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="radio" name="product-group" value="fix" id="filter-fix">
                 <label for="filter-fix">Фиксированная</label>
               </li>
-              <li>
-                <input type="radio" name="product-group" value="rubber" id="filter-rubber">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="radio" name="product-group" value="rubber" id="filter-rubber">
                 <label for="filter-rubber">Резиновая</label>
               </li>
             </ul>
@@ -60,35 +66,34 @@
           <fieldset>
             <legend>Особенности</legend>
             <ul>
-              <li>
-                <input type="checkbox" name="slider" id="filter-slider" checked>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="checkbox" name="slider" id="filter-slider" checked>
                 <label for="filter-slider">Слайдер</label>
               </li>
-              <li>
-                <input type="checkbox" name="benefits-block" id="filter-benefits-block">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="checkbox" name="benefits-block" id="filter-benefits-block">
                 <label for="filter-benefits-block">Блок преимуществ</label>
               </li>
-              <li>
-                <input type="checkbox" name="news" id="filter-news" checked>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="checkbox" name="news" id="filter-news" checked>
                 <label for="filter-news">Новости</label>
               </li>
-              <li>
-                <input type="checkbox" name="gallery" id="filter-gallery">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="checkbox" name="gallery" id="filter-gallery">
                 <label for="filter-gallery">Галерея</label>
               </li>
-
-              <li>
-                <input type="checkbox" name="garbage" id="filter-garbage">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="checkbox" name="garbage" id="filter-garbage">
                 <label for="filter-garbage">Корзина</label>
               </li>
             </ul>
           </fieldset>
 
-          <button type="submit">Показать</button>
+          <button class="filter-button button" type="submit">Показать</button>
         </form>
     </section>
 
-    <section>
+    <section class="sort">
       <h2>Сортировать</h2>
 
       <ul>
@@ -100,7 +105,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="gallery">
       <h2 class="visually-hidden">Галерия товаров</h2>
 
       <ul>
@@ -122,38 +127,38 @@
     </section>
   </main>
 
-  <footer>
-    <section>
+  <footer class="site-footer">
+    <section class="map">
       <h2 class="visually-hidden">Как нас найти?</h2>
 
       <p>
-        <span>NЁRDS DESIGN STUDIO</span>
+        <span class="span-name">NЁRDS DESIGN STUDIO</span>
 
         191186, Санкт-Петербург,
         ул. Б. Конюшенная, д. 19/8
-        тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+        тел. <a class="telephone" href="tel:+78122757575">+7 (812) 275-75-75</a>
       </p>
-      <button type="button">Напишите нам</button>
+      <a class="button" href="#">Напишите нам</a>
 
       <img src="img/map.png" alt="Карта" width="1440px" height="416px">
       <img src="img/map-marker.png" alt="Карта" width="231px" height="190px">
     </section>
-
-    <section>
+    <section class="social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
+
       <ul>
         <li><a href="#">Вконтакте</a></li>
         <li><a href="#">Фейсбук</a></li>
         <li><a href="#">Инстаграмм</a></li>
       </ul>
 
-      <p><span>Давайте дружить, это выгодно!</span>
+      <p><span class="span-offer">Давайте дружить, это выгодно!</span>
         Скидка 10% для друзей из социальных сетей.</p>
     </section>
   </footer>
 
 
-  <section>
+<section>
     <h2>Напишите нам</h2>
     <!--<a href="#"><img src="img/close-cross.svg" aria-label="Закрыть"></a>-->
 
