@@ -5,16 +5,16 @@
   <title>Дизайн-студия «Нёрдс»</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <nav class="site-header-navigation">
-      <a class="header-logo" href="index.html">
+    <nav class="header__navigation">
+      <a class="header__logo" href="index.html">
         <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
       </a>
-      <ul class="site-header-navigation">
+      <ul class="header__navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
@@ -27,71 +27,91 @@
   <main>
     <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
 
-    <section>
-      <h2 class="visually-hidden">Превью</h2> <!-- не думаю, что это лучшее оглавления этого section -->
+    <section class="preview">
+      <h2 class="visually-hidden">Превью</h2> <!-- не думаю, что это лучшее оглавления этого section --><!-- список слайдер и список радио баттонов -->
 
-      <img src="img/slide-1.png" alt="Ваше мобильное приложение" width="698px" height="413px">
-      <p>
-        <span>Долго, дорого,<br> скрупулезно.</span>
-        Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.
-      </p>
-      <a href="#">Узнать больше</a>
+      <ul class="preview__ul">
+        <li>
+          <h3 class="preview__h3">Долго, дорого,<br> скрупулезно.</h3>
+          <p class="preview__p">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <a class="button preview__button" href="#">Узнать больше</a>
+          <img class="visually-hidden" src="img/slide-1.png" alt="Ваше веб-приложение" width="698px" height="413px">
+        </li>
+        <li class="visually-hidden">
+          <h3 class="preview__h3">Любим математику как никто другой</h3>
+          <p class="preview__p">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+          <a class="button preview__button" href="#">Узнать больше</a>
+          <img src="img/slide-2.png" alt="Ваше веб-приложение" width="663px" height="430px">
+        </li>
+        <li class="visually-hidden">
+          <h3 class="preview__h3">Только ночь, только хардкор</h3>
+          <p class="preview__p">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+          <a class="button preview__button" href="#">Узнать больше</a>
+          <img src="img/slide-3.png" alt="Ваше веб-приложение" width="663px" height="430px">
+        </li>
+
+        <!-- здесь будут радио батоны-->
+      </ul>
+
     </section>
 
     <section class="advantages">
       <h2 class="visually-hidden">Каталог услуг</h2>
 
-      <ul>
+      <ul class="advantages__ul">
         <li>
-          <h3>Веб-сайты</h3>
-          <img src="img/web-sites.jpg" alt="Изображение веб-сайта" width="300" height="146">
-          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button class="button button-red-advantages" type="button">Заказать</button>
+          <img class="advantages__img" src="img/web-sites.jpg" alt="Изображение веб-сайта" width="300" height="146">
+          <h3 class="advantages__h3">Веб-сайты</h3>
+          <p class="advantages__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <button class="button advantages__button-red" type="button">Заказать</button>
         </li>
         <li>
-          <h3>Приложения</h3>
-          <img src="img/apps.jpg" alt="Изображение приложения" width="300" height="146">
-          <p>Покорите топ-10 приложений в AppSotre и Google Play</p>
-          <button class="button button-green-advantages" type="button">Заказать</button>
+          <img class="advantages__img" src="img/apps.jpg" alt="Изображение приложения" width="300" height="146">
+          <h3 class="advantages__h3">Приложения</h3>
+          <p class="advantages__text">Покорите топ-10 приложений в AppSotre и Google Play</p>
+          <button class="button advantages__button-green" type="button">Заказать</button>
         </li>
         <li>
-          <h3>Презентации</h3>
-          <img src="img/presentations.jpg" alt="Изображение презентации" width="300" height="146">
-          <p>Вы даже не подозреваете насколько вы изумительны!</p>
-          <button class="button button-yellow-advantages" type="button">Заказать</button>
+          <img class="advantages__img" src="img/presentations.jpg" alt="Изображение презентации" width="300" height="146">
+          <h3 class="advantages__h3">Презентации</h3>
+          <p class="advantages__text">Вы даже не подозреваете насколько вы изумительны!</p>
+          <button class="button advantages__button-yellow" type="button">Заказать</button>
         </li>
       </ul>
     </section>
 
-    <section>
+    <section class="information">
       <h2 class="visually-hidden">Информация о нас</h2>
 
-      <p>
-        <span>Мы - маленькая, но гордая дизайн-студия из Краснодара.</span>
+      <p class="information__text-bold"><!--<span class="span-information">Мы - маленькая, но гордая дизайн-студия из Краснодара.</span>-->
+        Мы — маленькая, но гордая дизайн-студия из Краснодара.
+      </p>
+      <p class="information__text">
         Исповедуем принципы минимализма и чистоты. Ставим математический расчет
         превыше креатива. Работаем не покладая рук, как роботы.
       </p>
-
-      <p>Выполняем заказы на разработку:</p> <!-- тут хз -->
-      <ul>
-        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      <p class="information__text-before-ul">Выполняем заказы на разработку:</p>
+      <ul class="information__ul">
         <li>Веб-сайтов любой сложности</li>
         <li>Мобильных приложений для iOS и Android</li>
+        <li>Слайдшоу и видео для корпоративных презентаций</li>
       </ul>
 
-      <img src="img/logo-illustration.png" alt="Логотип дизайн-студии «Нёрдс»" width="360px" height="208px">
-      <p>С 2004 года любим точность во всем:</p>
-      <ul>
-        <li><p><span>146%</span> Уровень самоотдачи</p></li>
-        <li><p><span>100%</span> Соблюдение сроков</p></li>
-        <li><p><span>50%</span> Минимальная предоплата</p></li>
-      </ul>
+      <aside class="more-information">
+        <img class="more-information__img" src="img/logo-illustration.png" alt="Логотип дизайн-студии «Нёрдс»" width="360px" height="208px">
+        <p class="more-information__text">С 2004 года любим точность во всем:</p>
+        <ul>
+          <li><span class="more-information__procent">146<sup>%</sup></span>Уровень самоотдачи</li>
+          <li><span class="more-information__procent">100<sup>%</sup></span>Соблюдение сроков</li>
+          <li><span class="more-information__procent">50<sup>%</sup></span>Минимальная предоплата</li>
+        </ul>
+      </aside>
     </section>
 
-    <section>
+    <section class="our-works">
       <h2 class="visually-hidden">Наши работы</h2>
 
-      <ul>
+      <ul class="our-works__ul">
         <li><a href="#"><img src="img/logo-1.png" alt="Html Academy" width="199px" height="68px"></a></li>
         <li><a href="#"><img src="img/logo-2.png" alt="Barbershop Borodinski" width="209px" height="90px"></a></li>
         <li><a href="#"><img src="img/logo-3.png" alt="Pink" width="185px" height="52px"></a></li>
@@ -104,15 +124,15 @@
       <section class="map">
         <h2 class="visually-hidden">Как нас найти?</h2>
 
-        <p>
-          <span class="span-name">NЁRDS DESIGN STUDIO</span>
-
-          191186, Санкт-Петербург,
+<!--        <div class="map-window">-->
+          <p class="map__name">NЁRDS DESIGN STUDIO</p>
+          <p class="map__contacts">
+          191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8
-          тел. <a class="telephone" href="tel:+78122757575">+7 (812) 275-75-75</a>
-        </p>
-        <a class="button" href="#">Напишите нам</a>
-
+          </p>
+          <p>тел. <a class="map__telephone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+          <a class="button map__button" href="#">Напишите нам</a>
+<!--        </div>-->
         <img src="img/map.png" alt="Карта" width="1440px" height="416px">
         <img src="img/map-marker.png" alt="Карта" width="231px" height="190px">
       </section>
@@ -124,9 +144,12 @@
           <li><a href="#">Фейсбук</a></li>
           <li><a href="#">Инстаграмм</a></li>
         </ul>
-
-        <p><span class="span-offer">Давайте дружить, это выгодно!</span>
-          Скидка 10% для друзей из социальных сетей.</p>
+        <!-- убрать спан -->
+        <!-- завернуть в див -->
+        <div class="social-offer">
+          <p class="social-offer__bold-text">Давайте дружить, это выгодно!</p>
+          <p class="social-offer__text">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </section>
   </footer>
 

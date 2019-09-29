@@ -26,6 +26,7 @@ a {
 
 .button {
   font-family: inherit;
+  font-size: inherit;
   font-weight: 500;
   line-height: 18px;
   text-transform: uppercase;
@@ -35,6 +36,7 @@ a {
 
   color: #ffffff;
   background-color: #fb565a;
+  border-radius: 3px;
   border: 0;
 }
 
@@ -44,9 +46,9 @@ button:active {
   background-color: #e74246;
 }
 
-.site-header-navigation{
+.header__navigation{
   font-size: 16px;
-  font-weight: 700; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
+  font-weight: 500; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
   line-height: 30px;
   text-transform: uppercase;
 
@@ -59,65 +61,100 @@ button:active {
   /*background-repeat: repeat;*/
 }
 
-.site-header-navigation ul {
+.header__navigation ul {
   list-style: none;
 }
 
-.site-header-navigation a{
+.header__navigation a{
   color: #000000;
 }
 
-.site-header-navigation a:hover,
-.site-header-navigation a:focus {
+.header__navigation a:hover,
+.header__navigation a:focus {
   color: #fb565a;
 }
 
-.site-header-navigation a:active{
+.header__navigation a:active{
   color: #000000;
 }
 
 /*
 Как лучше?
-так       .site-header-navigation-current
-или так   .site-header-navigation .current   ?*/
-.site-header-navigation .current {
+так       .header-navigation-current
+или так   .header-navigation .current   ?*/
+.header__navigation .current {
   /*Здесь будет создана полосочка нажатого элемента*/
+}
+
+.preview__ul{
+  padding: 85px 20px 80px 20px;
+  list-style: none;
+}
+
+.preview__h3{
+  margin: 0 0 26px 0;
+
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+}
+
+.preview__p{
+  margin: 0 0 40px 0;
+}
+
+.preview__button{
+  padding: 16px 55px 16px 54px;
 }
 
 .advantages{
   color: #000000;
 }
 
-.advantages h3 {
+.advantages__img{
+  margin-bottom: 18px;
+}
+
+.advantages__h3 {
+  margin: 0 0 16px 0;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.advantages ul{
+.advantages__text{
+  margin: 0 0 32px 0;
+  /*margin-bottom: 32px;*/
+}
+
+.advantages__ul{
   list-style: none;
+  padding: 80px 20px;
 }
 
-.button-red-advantages {
-
+.advantages__button-red,
+.advantages__button-green,
+.advantages__button-yellow {
+  padding: 16px 40px 16px 40px;
 }
 
-.button-green-advantages{
+.advantages__button-green{
   background-color: #00ca74;
 }
 
-.button-green-advantages:hover,
-.button-green-advantages:focus {
+.advantages__button-green:hover,
+.advantages__button-green:focus {
   background-color: #00bc6c;
 }
 
-.button-yellow-advantages{
+.advantages__button-yellow{
   background-color: #efc84a;
 }
 
-.button-yellow-advantages:hover,
-.button-yellow-advantages:focus {
+.advantages__button-yellow:hover,
+.advantages__button-yellow:focus {
   background-color: #eab534;
 }
 
@@ -126,6 +163,84 @@ button:active {
   vertical-align: center;
 
   background-color: #eeeeee;
+}
+
+.information{
+  padding: 80px 20px;
+}
+
+.information__text-bold{
+  margin: 0 0 32px 0;
+
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+.information__text{
+  margin: 0 0 39px 0;
+}
+
+.information__text-before-ul{
+  margin: 0 0 24px 0;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.information__ul li{
+  padding-bottom: 24px; /*22*/
+}
+/*АХТУНГ!!! КОСТЫЛЬ*/
+.information__ul li:last-child{
+  padding-bottom: 0;
+}
+
+.more-information{
+  /*padding: 0 20px 0 80px;*/
+}
+
+.more-information__img{
+  margin: 0 0 27px 0;
+}
+
+.more-information__text{
+  margin: 0 0 0 0;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  /*text-align: center;*/
+}
+
+.more-information__procent{
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 10.06px;
+}
+
+.our-works{
+  padding: 30px 20px;
+}
+
+.our-works__ul{
+  list-style: none;
+}
+
+.our-works__ul li{
+  padding: 0 49px;
+}
+
+.our-works a{
+  opacity: 0.2;
+}
+
+.our-works a:hover,
+.our-works a:focus{
+  opacity: 1;
+}
+
+.information ul{
+  list-style: none;
 }
 
 .header-catalog h1{
@@ -145,15 +260,25 @@ button:active {
   background-color: #eeeeee;
 }
 
+.filters{
+  padding: 0 20px;
+}
+
 .filter{
-  color: #283136;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  color: #283136;
 }
 
 .filter fieldset{
   border: none;
+  margin: 0 0 19px 0;
+  padding: 0;
+}
+
+.filter fieldset:nth-child(2){
+  margin-bottom: 25px;
 }
 
 .filter legend{
@@ -167,31 +292,107 @@ button:active {
 
 .filter ul{
   list-style: none;
+
+  margin: 16px 0 0 0;
 }
 
-.filter-input:hover + label,
-.filter-input:focus + label {
+.filter li{
+  padding: 0 0 20px 0;
+}
+
+.filter__cost-min-input,
+.filter__cost-max-input{
+  display: inline-block;
+
+  width: 80px;
+  height: 38px;
+
+  text-align: center;
+  vertical-align: center;
+
+  border: none;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+input.filter__cost-min-input::-webkit-inner-spin-button,
+input.filter__cost-max-input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filter__input:hover + label,
+.filter__input:focus + label {
   color: #283136;
 }
 
-.filter-input:disabled + label {
+.filter__input:disabled + label {
   color: #283132;
   opacity: 0.3;
 }
 
-.filter-button{
+.filter__button{
+  padding: 23px 92px 22px 93px;
+
   color: #000000;
   background-color: #eeeeee;
 }
 
-.filter-button:hover,
-.filter-button:focus,
-.filter-button:active {
+.filter__button:hover,
+.filter__button:focus,
+.filter__button:active {
   background-color: #dfdfdf;
+}
+
+.sort{
+  text-transform: uppercase;
+}
+
+.sort__h2{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.sort__ul{
+  list-style: none;
+}
+
+.sort__ul li > a{
+  opacity: 0.3;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort__ul li > a:hover,
+.sort__ul li > a:focus{
+  opacity: 1;
 }
 
 .gallery ul{
   list-style: none;
+}
+
+.gallery__pagination li > a{
+  padding: 16px 21px 15px 21px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+
+  color: #000000;
+}
+
+.gallery__pagination li > a:hover,
+.gallery__pagination li > a:focus{
+  background-color: #dfdfdf;
+}
+
+.gallery__pagination .gallery__pagination-current{
+  background-color: white;
+  padding: 13px 18px 12px 18px;
+  border: 3px solid #dbdbdb;;
 }
 
 .map{
@@ -200,14 +401,26 @@ button:active {
   line-height: 18px;
 }
 
-.map .telephone{
+/*.map-window{*/
+/*  box-sizing: border-box;*/
+/*  width: 319px;*/
+/*  height: 308px;*/
+
+/*  padding: 50px;*/
+/*}*/
+
+.map__telephone{
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
 }
 
-.map .span-name{
+.map__button{
+  padding: 15px 44px 16px 44px;
+}
+
+.map__name{
   color: #000000;
   font-size: 18px;
   font-weight: 700;
@@ -215,13 +428,27 @@ button:active {
   text-transform: uppercase;
 }
 
+/*.map-contacts{*/
+/*  margin: 0;*/
+/*  margin-top: 23px;*/
+/*  margin-bottom: 18px;*/
+/*}*/
+
 .social{
+  padding: 69px 20px;
+
   color: #444444;
   font-size: 16px;
   line-height: 22px;
 }
 
-.social .span-offer{
+.social-offer__text{
+  margin: 0;
+}
+
+.social-offer__bold-text{
+  margin: 0 0 10px 0;
+
   color: #000000;
   font-size: 36px;
   font-weight: 700;
@@ -234,13 +461,9 @@ button:active {
 
 .social a{
   color: #000000;
-  font-weight: 700; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
+  font-weight: 500; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
   line-height: 30px;
   text-transform: uppercase;
-}
-
-.social a{
-  color: #000000;
 }
 
 .social a:hover,
