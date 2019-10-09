@@ -1,0 +1,54 @@
+html,
+body {
+  min-width: 1440px;
+  min-height: 2476px;
+}
+
+body {
+  /*background-image: url('../img/nerds-index.jpg');*/
+  /*background-size: 1440px auto;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  min-height: 132px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header__navigation{
+  min-height: 65px;
+
+  box-sizing: border-box;
+  padding: 0 20px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header ul{
+  width: 440px;
+  max-width: 640px;
+  padding: 0;
+  list-style: none;
+}
+
+.header__logo{
+  width: 160px;
+  min-height: 65px;
+}
+
+.header__navigation-shopping-cart {
+  width: 160px;
+}
+
+/*---------------------------------------------------*/
+
