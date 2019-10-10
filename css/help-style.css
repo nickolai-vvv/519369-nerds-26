@@ -1,54 +1,370 @@
-html,
-body {
+body{
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  color: #283136;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  /*временно*/
   min-width: 1440px;
   min-height: 2476px;
 }
 
-body {
-  /*background-image: url('../img/nerds-index.jpg');*/
-  /*background-size: 1440px auto;*/
-  /*background-repeat: no-repeat;*/
-  /*background-position: center;*/
+a {
+  text-decoration: none;
 }
 
-.container{
-  width: 1200px;
-  margin: 0 auto;
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.header {
-  min-height: 132px;
+.button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  text-align: center;
+  vertical-align: center;
+
+  color: #ffffff;
+  background-color: #fb565a;
+  border-radius: 3px;
+  border: 0;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #e74246;
+}
+
+.header{
+  background-color: #eeeeee;
 }
 
 .header__navigation{
-  min-height: 65px;
-
-  box-sizing: border-box;
-  padding: 0 20px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  font-size: 16px;
+  font-weight: 500; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
+  line-height: 30px;
+  text-transform: uppercase;
+  /*Возникает вопрос: а нужно ли ?
+    Или это только тогда, когда есть какая-то текстура
+    Мое мнение, что здесь просто заливка цветом и картинка фоновая не нужна*/
+  /*background-image: url("../img/grey-back.png"); */
+  /*background-position: 0 0;*/
+  /*background-repeat: repeat;*/
 }
 
-.header ul{
-  width: 440px;
-  max-width: 640px;
-  padding: 0;
+.header__navigation ul {
   list-style: none;
 }
 
+.header__navigation a{
+  color: #000000;
+}
+
+.header__navigation a:hover,
+.header__navigation a:focus {
+  color: #fb565a;
+}
+
+.header__navigation a:active{
+  color: #000000;
+}
+
+/*
+Как лучше?
+так       .header-navigation-current
+или так   .header-navigation .current   ?*/
+.header__navigation .current {
+  /*Здесь будет создана полосочка нажатого элемента*/
+}
+
+.advantages{
+  color: #000000;
+  padding: 80px 80px 82px 20px;
+}
+
+.advantages__img{
+  margin-bottom: 18px;
+}
+
+.advantages__h3 {
+  margin: 0 0 16px 0;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.advantages__text{
+  margin: 0 0 32px 0;
+  padding-right: 35px;
+  /*margin-bottom: 32px;*/
+}
+
+.advantages__ul{
+  list-style: none;
+  padding: 0;
+}
+
+.advantages__button-red,
+.advantages__button-green,
+.advantages__button-yellow {
+  padding: 16px 40px 16px 40px;
+}
+
+.advantages__button-green{
+  background-color: #00ca74;
+}
+
+.advantages__button-green:hover,
+.advantages__button-green:focus {
+  background-color: #00bc6c;
+}
+
+.advantages__button-yellow{
+  background-color: #efc84a;
+}
+
+.advantages__button-yellow:hover,
+.advantages__button-yellow:focus {
+  background-color: #eab534;
+}
+
+.information__text-bold{
+  margin: 0 0 32px 0;
+
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+.information__text{
+  margin: 0 0 39px 0;
+}
+
+.information__text-before-ul{
+  margin: 0 0 24px 0;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.information__ul{
+  padding-left: 36px;
+  list-style: none;
+}
+
+.information__ul li{
+  padding-bottom: 24px;
+}
+
+.more-information__img {
+  margin-bottom: 35px;
+}
+
+.more-information__text{
+  margin: 0;
+  margin-bottom: 58px;
+  padding-left: 17px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  /*text-align: center;*/
+}
+
+.more-information__procent{
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 10.06px;
+}
+
+.more-information__procent sup{
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+/*-----------------------------Сетки------------------------------*/
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  /*Временно*/
+  min-height: 132px;
+}
+
 .header__logo{
-  width: 160px;
-  min-height: 65px;
+ align-self: flex-start;
+
+  /*для пиксель-пёрфекта*/
+  margin-left: -1px;
+  margin-top: 1px;
 }
 
-.header__navigation-shopping-cart {
-  width: 160px;
+.header__navigation{
+  min-height: 83px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/*---------------------------------------------------*/
+.header__navigation ul{
+  padding: 0;
+  width: 440px;
 
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__shop-busket{
+  display: flex;
+  justify-content: flex-end;
+
+  box-sizing: border-box;
+  width: 160px;
+
+  /*для PP*/
+  padding-right: 2px;
+}
+
+.container{
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 1200px;
+}
+
+.fullWidthGray{
+  background-color: #eeeeee;
+  margin-bottom: 80px;
+}
+
+.preview__ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  position: relative; /*для картиночки слайдера*/
+}
+
+.preview__h3{
+  margin: 0 0 26px 0;
+
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+}
+
+.preview__p{
+  margin: 0 0 53px 0;
+}
+
+.preview__button{
+  width: 240px;
+  padding: 16px 55px 16px 54px;
+}
+
+/*дефолтные параметры*/
+.preview__slide{
+  word-wrap: break-word;
+  width: 420px;
+  padding-top: 60px;
+  padding-bottom: 93px;
+}
+
+.preview__ul li:first-child .preview__slide{
+  width: 380px;
+}
+
+.preview__ul li:nth-child(2) .preview__slide{
+  width: 520px;
+}
+
+.preview__ul li:nth-child(3) .preview__slide{
+  width: 415px;
+}
+
+.preview__slide img{
+  position: absolute;
+  right: 31px;
+  bottom: 0;
+}
+
+.advantages{
+  color: #000000;
+  padding-right: 80px;
+  padding-left: 20px;
+  margin-bottom: 80px;
+}
+
+.advantages__ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__ul li{
+  width: 300px;
+}
+
+.information{
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 20px;
+}
+
+.information__column{
+  width: 660px;
+  margin-bottom: 54px;
+  margin-top: 77px;
+}
+
+.more-information{
+  display: flex;
+  flex-direction: column;
+
+  width: 360px;
+  margin-top: 43px;
+}
+
+.more-information__ul{
+  width: 337px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.more-information__ul li{
+  display: flex;
+  flex-direction: column;
+
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.more-information__ul p{
+  line-height: 18px;
+  margin-top: 37px;
+}
