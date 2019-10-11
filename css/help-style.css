@@ -198,6 +198,85 @@ a {
   margin-bottom: 5px;
 }
 
+.our-works a{
+  opacity: 0.2;
+}
+
+.our-works a:hover,
+.our-works a:focus{
+  opacity: 1;
+}
+
+.map-window__telephone{
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.map-window__button{
+  margin-top: auto;
+  padding: 15px 44px 16px 44px;
+}
+
+.map-window__name{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  margin-bottom: 22px;
+}
+
+.map-window__name ~ p{
+  margin: 0;
+  margin-bottom: 18px;
+  padding-left: 1px;
+}
+
+/*.map-window__contacts `{*/
+/*  margin: 0;*/
+/*  margin-bottom: 18px;*/
+/*}*/
+
+.social-offer__text{
+  margin: 0;
+}
+
+.social-offer__bold-text{
+  margin: 0 0 10px 0;
+
+  color: #000000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+
+  letter-spacing: 0.2px;
+}
+
+.social ul{
+  list-style: none;
+}
+
+.social a{
+  color: #000000;
+  font-weight: 500; /*ПО УСЛОВИЮ ТАМ 500, НО НА ВИД 700*/
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.social a:hover,
+.social a:focus {
+  color: #fb565a;
+}
+
+.social a:active{
+  color: #000000;
+}
+
+
+
 /*-----------------------------Сетки------------------------------*/
 .header{
   display: flex;
@@ -333,8 +412,8 @@ a {
 
 .information__column{
   width: 660px;
-  margin-bottom: 54px;
   margin-top: 77px;
+  margin-bottom: 33px;
 }
 
 .more-information{
@@ -367,4 +446,80 @@ a {
 .more-information__ul p{
   line-height: 18px;
   margin-top: 37px;
+}
+
+/*our works ещё надо доделать*/
+.our-works{
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /*временно для сетки*/
+  min-height: 180px;
+}
+
+.our-works__ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+  padding-left: 30px;
+  padding-right: 44px;
+}
+
+.our-works__ul li:first-child{
+  align-self: flex-end;
+}
+
+.our-works__ul li:nth-child(4){
+  align-self: flex-end;
+}
+
+.footer{
+  margin-top: 84px;
+}
+
+.map{
+  position: relative;
+
+  color: #666666;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.map-window{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  width: 319px;
+  height: 308px;
+  padding: 31px 50px 47px;
+
+  background-color: #ffffff;
+
+  position: absolute;
+  top: 54px;
+  left: 371px;
+}
+
+.social{
+  display: flex;
+  align-items: center;
+
+  color: #444444;
+  font-size: 16px;
+  line-height: 22px;
+
+  min-height: 217px;
+}
+
+.social__ul{
+ width: 260px;
+  padding: 0;
+  margin: 0;
+  margin-right: 138px;
 }
