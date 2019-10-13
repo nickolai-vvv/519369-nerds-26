@@ -276,6 +276,122 @@ a {
 }
 
 
+.range-value{
+  width: 80px;
+  height: 38px;
+
+  text-align: center;
+  vertical-align: center;
+
+  background-color: #eeeeee;
+}
+
+.filters{
+  width: 260px;
+  padding-top: 15px;
+}
+
+.filter{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #283136;
+}
+
+.filter fieldset{
+  border: none;
+  margin: 0 0 19px 0;
+  padding: 0;
+}
+
+.filter fieldset:nth-child(2){
+  margin-bottom: 25px;
+}
+
+.filter legend{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter ul{
+  list-style: none;
+
+  padding-left: 36px;
+  margin: 16px 0 0 0;
+}
+
+.filter li{
+  padding: 0 0 20px 0;
+}
+
+.filter__cost-min-input,
+.filter__cost-max-input{
+  display: inline-block;
+
+  width: 80px;
+  height: 38px;
+
+  text-align: center;
+  vertical-align: center;
+
+  border: none;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+input.filter__cost-min-input::-webkit-inner-spin-button,
+input.filter__cost-max-input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filter__input:hover + label,
+.filter__input:focus + label {
+  color: #283136;
+}
+
+.filter__input:disabled + label {
+  color: #283132;
+  opacity: 0.3;
+}
+
+.filter__button{
+  padding: 17px 90px 15px 88px;
+
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.filter__button:hover,
+.filter__button:focus,
+.filter__button:active {
+  background-color: #dfdfdf;
+}
+
+.sort__h2{
+  align-self: center;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.sort__ul li > a{
+  opacity: 0.3;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort__ul li > a:hover,
+.sort__ul li > a:focus{
+  opacity: 1;
+}
 
 /*-----------------------------Сетки------------------------------*/
 .header{
@@ -523,3 +639,122 @@ a {
   margin: 0;
   margin-right: 138px;
 }
+
+.heading-wrapper-gray{
+  display: flex;
+  min-height: 224px;
+  margin-bottom: 40px;
+
+  text-align: center;
+  vertical-align: center;
+
+  background-color: #eeeeee;
+}
+
+.heading-wrapper-gray h1{
+  margin: auto;
+  margin-bottom: 108px;
+
+  color: #000000;
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 0.1px;
+}
+
+.row-direction{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter fieldset:first-of-type{
+  /*временно для сетки range*/
+  min-height: 245px;
+}
+
+.filter fieldset:first-of-type legend{
+  letter-spacing: 0.5px;
+}
+
+.filter fieldset:last-of-type{
+  margin-bottom: 29px;
+}
+
+.column-direction{
+  display: flex;
+  flex-direction: column;
+
+  width: 760px;
+}
+
+.sort{
+  display: flex;
+
+  width: 760px;
+  text-transform: uppercase;
+}
+
+.sort__ul{
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+
+  width: 360px;
+  list-style: none;
+}
+
+.gallery__ul-items{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  list-style: none;
+  padding: 0;
+}
+
+.gallery__ul-items li{
+  margin-bottom: 26px;
+}
+
+.gallery__ul-pagination{
+  display: flex;
+
+  list-style: none;
+  padding: 0;
+}
+
+.gallery__ul-pagination li{
+  margin-right: 10px;
+}
+
+.gallery__ul-pagination li > a{
+  padding: 16px 21px 15px 21px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+
+  color: #000000;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+
+  color: #000000;
+}
+
+.gallery__ul-pagination li > a:hover,
+.gallery__ul-pagination li > a:focus{
+  background-color: #dfdfdf;
+}
+
+.gallery__ul-pagination .gallery__ul-pagination-current{
+  background-color: white;
+  padding: 13px 17px 12px 18px;
+  border: 3px solid #dbdbdb;
+}
+
+.gallery__ul-pagination .gallery__ul-pagination-next{
+  padding-left: 78px;
+  padding-right: 78px;
+  text-transform: uppercase;
+}
+

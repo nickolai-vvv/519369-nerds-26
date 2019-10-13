@@ -9,81 +9,90 @@
 </head>
 <body>
 
-  <header>
-    <nav class="header__navigation">
-      <a class="header__logo" href="index.html">
-        <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
-      </a>
-      <ul>
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <a href="#">Корзина</a>
-    </nav>
-  </header>
+<header class="header">
+  <nav class="header__navigation container">
+    <a class="header__logo" href="index.html">
+      <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
+    </a>
+    <ul>
+      <li><a href="#">Студия</a></li>
+      <li><a href="#">Клиенты</a></li>
+      <li><a href="catalog.html">Магазин</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
 
-  <main>
-    <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
+    <a class="header__shop-busket" href="#">Корзина</a>
+  </nav>
+</header>
 
-    <section class="preview">
+<main>
+  <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
+
+  <div class="fullWidthGray">
+    <section class="preview container">
       <h2 class="visually-hidden">Превью</h2> <!-- не думаю, что это лучшее оглавления этого section --><!-- список слайдер и список радио баттонов -->
 
       <ul class="preview__ul">
-        <li>
-          <h3 class="preview__h3">Долго, дорого,<br> скрупулезно.</h3>
-          <p class="preview__p">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-          <a class="button preview__button" href="#">Узнать больше</a>
-          <img src="img/slide-1.png" alt="Ваше веб-приложение" width="698px" height="413px">
+        <li class="">
+          <div class="preview__slide">
+            <h3 class="preview__h3">Долго, дорого, скрупулезно.</h3>
+            <p class="preview__p">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+            <a class="button preview__button" href="#">Узнать больше</a>
+            <img src="img/slide-1.png" alt="Ваше веб-приложение" width="698px" height="413px">
+          </div>
         </li>
         <li class="visually-hidden">
-          <h3 class="preview__h3">Любим математику как никто другой</h3>
-          <p class="preview__p">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-          <a class="button preview__button" href="#">Узнать больше</a>
-          <img src="img/slide-2.png" alt="Ваше веб-приложение" width="663px" height="430px">
+          <div class="preview__slide">
+            <h3 class="preview__h3">Любим математику как никто другой</h3>
+            <p class="preview__p">Никакого креатива, только математические формулы<br>для расчета идеальных пропорций.</p>
+            <a class="button preview__button" href="#">Узнать больше</a>
+            <img src="img/slide-2.png" alt="Ваше веб-приложение" width="663px" height="430">
+          </div>
         </li>
         <li class="visually-hidden">
-          <h3 class="preview__h3">Только ночь, только хардкор</h3>
-          <p class="preview__p">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-          <a class="button preview__button" href="#">Узнать больше</a>
-          <img src="img/slide-3.png" alt="Ваше веб-приложение" width="663px" height="430px">
+          <div class="preview__slide">
+            <h3 class="preview__h3">Только ночь, только хардкор</h3>
+            <p class="preview__p">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
+            <a class="button preview__button" href="#">Узнать больше</a>
+            <img src="img/slide-3.png" alt="Ваше веб-приложение" width="759" height="411">
+          </div>
         </li>
 
         <!-- здесь будут радио батоны-->
       </ul>
-
     </section>
+  </div>
 
-    <section class="advantages">
-      <h2 class="visually-hidden">Каталог услуг</h2>
+  <section class="advantages container">
+    <h2 class="visually-hidden">Каталог услуг</h2>
 
-      <ul class="advantages__ul">
-        <li>
-          <img class="advantages__img" src="img/web-sites.jpg" alt="Изображение веб-сайта" width="300" height="146">
-          <h3 class="advantages__h3">Веб-сайты</h3>
-          <p class="advantages__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button class="button advantages__button-red" type="button">Заказать</button>
-        </li>
-        <li>
-          <img class="advantages__img" src="img/apps.jpg" alt="Изображение приложения" width="300" height="146">
-          <h3 class="advantages__h3">Приложения</h3>
-          <p class="advantages__text">Покорите топ-10 приложений в AppSotre и Google Play</p>
-          <button class="button advantages__button-green" type="button">Заказать</button>
-        </li>
-        <li>
-          <img class="advantages__img" src="img/presentations.jpg" alt="Изображение презентации" width="300" height="146">
-          <h3 class="advantages__h3">Презентации</h3>
-          <p class="advantages__text">Вы даже не подозреваете насколько вы изумительны!</p>
-          <button class="button advantages__button-yellow" type="button">Заказать</button>
-        </li>
-      </ul>
-    </section>
+    <ul class="advantages__ul">
+      <li>
+        <img class="advantages__img" src="img/web-sites.jpg" alt="Изображение веб-сайта" width="300" height="146">
+        <h3 class="advantages__h3">Веб-сайты</h3>
+        <p class="advantages__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+        <button class="button advantages__button-red" type="button">Заказать</button>
+      </li>
+      <li>
+        <img class="advantages__img" src="img/apps.jpg" alt="Изображение приложения" width="300" height="146">
+        <h3 class="advantages__h3">Приложения</h3>
+        <p class="advantages__text">Покорите топ-10 приложений в AppSotre и Google Play</p>
+        <button class="button advantages__button-green" type="button">Заказать</button>
+      </li>
+      <li>
+        <img class="advantages__img" src="img/presentations.jpg" alt="Изображение презентации" width="300" height="146">
+        <h3 class="advantages__h3">Презентации</h3>
+        <p class="advantages__text">Вы даже не подозреваете насколько вы изумительны!</p>
+        <button class="button advantages__button-yellow" type="button">Заказать</button>
+      </li>
+    </ul>
+  </section>
 
-    <section class="information">
-      <h2 class="visually-hidden">Информация о нас</h2>
+  <section class="information container">
+    <h2 class="visually-hidden">Информация о нас</h2>
 
-      <p class="information__text-bold"><!--<span class="span-information">Мы - маленькая, но гордая дизайн-студия из Краснодара.</span>-->
+    <div class="information__column">
+      <p class="information__text-bold">
         Мы — маленькая, но гордая дизайн-студия из Краснодара.
       </p>
       <p class="information__text">
@@ -96,85 +105,102 @@
         <li>Мобильных приложений для iOS и Android</li>
         <li>Слайдшоу и видео для корпоративных презентаций</li>
       </ul>
+    </div>
 
-      <aside class="more-information">
-        <img class="more-information__img" src="img/logo-illustration.png" alt="Логотип дизайн-студии «Нёрдс»" width="360px" height="208px">
-        <p class="more-information__text">С 2004 года любим точность во всем:</p>
-        <ul>
-          <li><span class="more-information__procent">146<sup>%</sup></span>Уровень самоотдачи</li>
-          <li><span class="more-information__procent">100<sup>%</sup></span>Соблюдение сроков</li>
-          <li><span class="more-information__procent">50<sup>%</sup></span>Минимальная предоплата</li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="our-works">
-      <h2 class="visually-hidden">Наши работы</h2>
-
-      <ul class="our-works__ul">
-        <li><a href="#"><img src="img/logo-1.png" alt="Html Academy" width="199px" height="68px"></a></li>
-        <li><a href="#"><img src="img/logo-2.png" alt="Barbershop Borodinski" width="209px" height="90px"></a></li>
-        <li><a href="#"><img src="img/logo-3.png" alt="Pink" width="185px" height="52px"></a></li>
-        <li><a href="#"><img src="img/logo-4.png" alt="Mishka" width="173px" height="84px"></a></li>
+    <aside class="more-information">
+      <img class="more-information__img" src="img/logo-illustration.png" alt="Логотип дизайн-студии «Нёрдс»" width="360px" height="208px">
+      <p class="more-information__text">С 2004 года любим точность во всем:</p>
+      <ul class="more-information__ul">
+        <li>
+            <span class="more-information__procent">
+              146<sup>%</sup>
+            </span>
+          <p>Уровень самоотдачи</p>
+        </li>
+        <li>
+            <span class="more-information__procent">
+              100<sup>%</sup>
+            </span>
+          <p>Соблюдение сроков</p>
+        </li>
+        <li>
+            <span class="more-information__procent">
+              50<sup>%</sup>
+            </span>
+          <p>Минимальная предоплата</p>
+        </li>
       </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-      <section class="map">
-        <h2 class="visually-hidden">Как нас найти?</h2>
-
-<!--        <div class="map-window">-->
-          <p class="map__name">NЁRDS DESIGN STUDIO</p>
-          <p class="map__contacts">
-          191186, Санкт-Петербург,<br>
-          ул. Б. Конюшенная, д. 19/8
-          </p>
-          <p>тел. <a class="map__telephone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-          <a class="button map__button" href="#">Напишите нам</a>
-<!--        </div>-->
-        <img src="img/map.png" alt="Карта" width="1440px" height="416px">
-        <img src="img/map-marker.png" alt="Карта" width="231px" height="190px">
-      </section>
-      <section class="social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
-
-        <ul>
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Инстаграмм</a></li>
-        </ul>
-        <!-- убрать спан -->
-        <!-- завернуть в див -->
-        <div class="social-offer">
-          <p class="social-offer__bold-text">Давайте дружить, это выгодно!</p>
-          <p class="social-offer__text">Скидка 10% для друзей из социальных сетей.</p>
-        </div>
-      </section>
-  </footer>
-
-  <section class="visually-hidden">
-    <h2>Напишите нам</h2>
-    <!--<a href="#"><img src="img/close-cross.svg" aria-label="Закрыть"></a>-->
-
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="send-name">Ваше имя:</label>
-        <input type="text" name="name" id="send-name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="send-email">Ваш e-mail:</label>
-        <input type="email" name="email" id="send-email" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="send-message">Текст письма:</label>
-        <!-- можно подумать насчёт textarea!!! -->
-        <input type="text" name="message" id="send-message" placeholder="В свободной форме">
-      </p>
-
-      <button type="submit">Отправить</button>
-    </form>
+    </aside>
   </section>
+
+  <section class="our-works container">
+    <h2 class="visually-hidden">Наши работы</h2>
+
+    <ul class="our-works__ul">
+      <li><a href="#"><img src="img/logo-1.png" alt="Html Academy" width="199px" height="68px"></a></li>
+      <li><a href="#"><img src="img/logo-2.png" alt="Barbershop Borodinski" width="209px" height="90px"></a></li>
+      <li><a href="#"><img src="img/logo-3.png" alt="Pink" width="185px" height="52px"></a></li>
+      <li><a href="#"><img src="img/logo-4.png" alt="Mishka" width="173px" height="84px"></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <section class="map">
+    <h2 class="visually-hidden">Как нас найти?</h2>
+
+    <div class="map-window">
+      <p class="map-window__name">NЁRDS DESIGN STUDIO</p>
+      <p class="map-window__contacts">
+        191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8
+      </p>
+      <p>тел. <a class="map-window__telephone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+      <a class="button map-window__button" href="#">Напишите нам</a>
+    </div>
+
+    <!--img это временно. Там будет карта-->
+    <img style="display: block" src="img/map.png" alt="Карта" width="1440" height="416">
+    <img class="visually-hidden" src="img/map-marker.png" alt="Карта" width="231" height="190">
+  </section>
+  <section class="social container">
+    <h2 class="visually-hidden">Мы в социальных сетях</h2>
+
+    <ul class="social__ul">
+      <li><a href="#">Вконтакте</a></li>
+      <li><a href="#">Фейсбук</a></li>
+      <li><a href="#">Инстаграмм</a></li>
+    </ul>
+
+    <div class="social-offer">
+      <p class="social-offer__bold-text">Давайте дружить, это выгодно!</p>
+      <p class="social-offer__text">Скидка 10% для друзей из социальных сетей.</p>
+    </div>
+  </section>
+</footer>
+
+<!--&lt;!&ndash;<section class="visually-hidden">&ndash;&gt;-->
+<!--&lt;!&ndash;  <h2>Напишите нам</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;  &lt;!&ndash;<a href="#"><img src="img/close-cross.svg" aria-label="Закрыть"></a>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <form action="https://echo.htmlacademy.ru" method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>&ndash;&gt;-->
+<!--&lt;!&ndash;      <label for="send-name">Ваше имя:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input type="text" name="name" id="send-name" placeholder="Имя Фамилия">&ndash;&gt;-->
+<!--&lt;!&ndash;    </p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>&ndash;&gt;-->
+<!--&lt;!&ndash;      <label for="send-email">Ваш e-mail:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <input type="email" name="email" id="send-email" placeholder="email@example.com">&ndash;&gt;-->
+<!--&lt;!&ndash;    </p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>&ndash;&gt;-->
+<!--&lt;!&ndash;      <label for="send-message">Текст письма:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash; можно подумать насчёт textarea!!! &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <input type="text" name="message" id="send-message" placeholder="В свободной форме">&ndash;&gt;-->
+<!--&lt;!&ndash;    </p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <button type="submit">Отправить</button>&ndash;&gt;-->
+<!--&lt;!&ndash;  </form>&ndash;&gt;-->
+<!--&lt;!&ndash;</section>&ndash;&gt;-->
 
 </body>
 </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Дизайн-студия «Нёрдс»</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/help-style.css" rel="stylesheet">
+  <!--  <link href="css/style.css" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="header__navigation container">
+      <a class="header__logo" href="index.html">
+        <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
+      </a>
+      <ul>
+        <li><a href="#">Студия</a></li>
+        <li><a href="#">Клиенты</a></li>
+        <li><a href="catalog.html">Магазин</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+
+      <a class="header__shop-busket" href="#">Корзина</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="heading-wrapper-gray">
+      <h1>Магазин готовых шаблонов</h1>
+    </div>
+
+    <div class="row-direction container">
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Стоимость:</legend>
+
+            <input type="range" name="cost" id="filter__range-cost">
+
+            <label for="filter__min-cost">ОТ</label>
+            <input class="filter__cost-min-input" type="number" value="0" name="min-cost" id="filter__min-cost">
+            <label for="filter__max-cost">ОТ</label>
+            <input class="filter__cost-max-input" type="number" value="15000" name="max-cost" id="filter__max-cost">
+          </fieldset>
+
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul class="filter__grid">
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-checkbox" type="radio" name="product-group" value="adaptive" id="filter__adaptive" checked>
+                <label for="filter__adaptive">Адаптивная</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-checkbox" type="radio" name="product-group" value="fix" id="filter__fix">
+                <label for="filter__fix">Фиксированная</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-checkbox" type="radio" name="product-group" value="rubber" id="filter__rubber">
+                <label for="filter__rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-radio" type="checkbox" name="slider" id="filter__slider" checked>
+                <label for="filter__slider">Слайдер</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-radio" type="checkbox" name="benefits-block" id="filter__benefits-block">
+                <label for="filter__benefits-block">Блок преимуществ</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-radio" type="checkbox" name="news" id="filter__news" checked>
+                <label for="filter__news">Новости</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-radio" type="checkbox" name="gallery" id="filter__gallery">
+                <label for="filter__gallery">Галерея</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input-radio" type="checkbox" name="garbage" id="filter__garbage">
+                <label for="filter__garbage">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button class="filter__button button" type="submit">Показать</button>
+        </form>
+      </section>
+
+      <div class="column-direction">
+        <section class="sort">
+          <h2 class="sort__h2">Сортировать:</h2>
+
+          <ul class="sort__ul">
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По названию</a></li>
+            <li><a href="#"><img src="img/icon-down-dir.svg" aria-label="Сортировка по убыванию"></a></li>
+            <li><a href="#"><img src="img/icon-up-dir.svg" aria-label="Сортировка по возрастанию"></a></li>
+          </ul>
+        </section>
+
+        <section class="gallery">
+          <h2 class="visually-hidden">Галерия товаров</h2>
+
+          <ul class="gallery__ul-items">
+            <!-- необходим тег <a> -->
+            <li><a href="#"><img src="img/img-sedona.jpg"></a></li>
+            <li><a href="#"><img src="img/img-pink.jpg"></a></li>
+            <li><a href="#"><img src="img/img-barbershop.jpg"></a></li>
+            <li><a href="#"><img src="img/img-mishka.jpg"></a></li>
+            <li><a href="#"><img src="img/img-aplus.jpg"></a></li>
+            <li><a href="#"><img src="img/img-kvast.jpg"></a></li>
+          </ul>
+
+          <ul class="gallery__ul-pagination">
+            <!-- aria-label=""-->
+            <li><a class="gallery__ul-pagination-current" href="#" aria-label="Переход на страницу 1(текущая страница)">1</a></li>
+            <li><a href="#" aria-label="Переход на страницу 2">2</a></li>
+            <li><a href="#" aria-label="Переход на страницу 3">3</a></li>
+            <li><a class="gallery__ul-pagination-next" href="#" aria-label="Переход на следующую страницу">Следующая</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <section class="map">
+      <h2 class="visually-hidden">Как нас найти?</h2>
+
+      <div class="map-window">
+        <p class="map-window__name">NЁRDS DESIGN STUDIO</p>
+        <p class="map-window__contacts">
+          191186, Санкт-Петербург,<br>
+          ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p>тел. <a class="map-window__telephone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+        <a class="button map-window__button" href="#">Напишите нам</a>
+      </div>
+
+      <!--img это временно. Там будет карта-->
+      <img style="display: block" src="img/map.png" alt="Карта" width="1440" height="416">
+      <img class="visually-hidden" src="img/map-marker.png" alt="Карта" width="231" height="190">
+    </section>
+    <section class="social container">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+
+      <ul class="social__ul">
+        <li><a href="#">Вконтакте</a></li>
+        <li><a href="#">Фейсбук</a></li>
+        <li><a href="#">Инстаграмм</a></li>
+      </ul>
+
+      <div class="social-offer">
+        <p class="social-offer__bold-text">Давайте дружить, это выгодно!</p>
+        <p class="social-offer__text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
