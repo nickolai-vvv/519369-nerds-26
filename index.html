@@ -28,40 +28,37 @@
 <main>
   <h1 class="visually-hidden">Дизайн-студия «Нёрдс»</h1>
 
-  <div class="fullWidthGray">
-    <section class="preview container">
-      <h2 class="visually-hidden">Превью</h2> <!-- не думаю, что это лучшее оглавления этого section --><!-- список слайдер и список радио баттонов -->
+  <section class="preview">
+    <div class="container">
+      <h2 class="visually-hidden">Преимущества</h2>
 
+      <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+      <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+      <div class="preview__controls">
+        <label class="preview__controls-item--1" for="product-1">Первый</label>
+        <label class="preview__controls-item--2" for="product-2">Второй</label>
+        <label class="preview__controls-item--3" for="product-3">Третий</label>
+      </div>
       <ul class="preview__ul">
-        <li class="">
-          <div class="preview__slide">
-            <h3 class="preview__h3">Долго, дорого, скрупулезно.</h3>
-            <p class="preview__p">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
-            <a class="button preview__button" href="#">Узнать больше</a>
-            <img src="img/slide-1.png" alt="Ваше веб-приложение" width="698px" height="413px">
-          </div>
+        <li class="preview__slide">
+          <h3>Долго, дорого,<br> скрупулезно.</h3>
+          <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+          <a class="button preview__button" href="#">Узнать больше</a>
         </li>
-        <li class="visually-hidden">
-          <div class="preview__slide">
-            <h3 class="preview__h3">Любим математику как никто другой</h3>
-            <p class="preview__p">Никакого креатива, только математические формулы<br>для расчета идеальных пропорций.</p>
-            <a class="button preview__button" href="#">Узнать больше</a>
-            <img src="img/slide-2.png" alt="Ваше веб-приложение" width="663px" height="430">
-          </div>
+        <li class="preview__slide">
+          <h3>Любим математику как никто другой</h3>
+          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+          <a class="button preview__button" href="#">Узнать больше</a>
         </li>
-        <li class="visually-hidden">
-          <div class="preview__slide">
-            <h3 class="preview__h3">Только ночь, только хардкор</h3>
-            <p class="preview__p">Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
-            <a class="button preview__button" href="#">Узнать больше</a>
-            <img src="img/slide-3.png" alt="Ваше веб-приложение" width="759" height="411">
-          </div>
+        <li class="preview__slide">
+          <h3>Только ночь,<br> только хардкор</h3>
+          <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+          <a class="button preview__button" href="#">Узнать больше</a>
         </li>
-
-        <!-- здесь будут радио батоны-->
       </ul>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <section class="advantages container">
     <h2 class="visually-hidden">Каталог услуг</h2>
@@ -87,6 +84,8 @@
       </li>
     </ul>
   </section>
+
+  <div class="separator-horizontal container"></div>
 
   <section class="information container">
     <h2 class="visually-hidden">Информация о нас</h2>
@@ -133,16 +132,24 @@
     </aside>
   </section>
 
+  <div class="separator-horizontal container"></div>
+
   <section class="our-works container">
     <h2 class="visually-hidden">Наши работы</h2>
 
+    <!-- пока с дивами разделителями. Думаю передать на пвевдоэлементы, но пока не оч получается -->
     <ul class="our-works__ul">
-      <li><a href="#"><img src="img/logo-1.png" alt="Html Academy" width="199px" height="68px"></a></li>
+      <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1.png" alt="Html Academy" width="199px" height="68px"></a></li>
+      <li><div class="separator-vertical"></div></li>
       <li><a href="#"><img src="img/logo-2.png" alt="Barbershop Borodinski" width="209px" height="90px"></a></li>
+      <li><div class="separator-vertical"></div></li>
       <li><a href="#"><img src="img/logo-3.png" alt="Pink" width="185px" height="52px"></a></li>
+      <li><div class="separator-vertical"></div></li>
       <li><a href="#"><img src="img/logo-4.png" alt="Mishka" width="173px" height="84px"></a></li>
     </ul>
   </section>
+
+  <div class="separator-horizontal container"></div>
 </main>
 
 <footer class="footer">
@@ -167,9 +174,21 @@
     <h2 class="visually-hidden">Мы в социальных сетях</h2>
 
     <ul class="social__ul">
-      <li><a href="#">Вконтакте</a></li>
-      <li><a href="#">Фейсбук</a></li>
-      <li><a href="#">Инстаграмм</a></li>
+      <li>
+        <a class="social__ul-item" href="#" aria-label="Вконтакте">
+          <img src="img/vk-icon.svg" alt="Иконка Вконтакте" width="26" height="15">
+        </a>
+      </li>
+      <li>
+        <a class="social__ul-item" href="#" aria-label="Фейсбук">
+          <img src="img/fb-icon.svg" alt="Иконка Фейсбука" width="12" height="22">
+        </a>
+      </li>
+      <li>
+        <a class="social__ul-item" href="#" aria-label="Инстаграмм">
+        <img src="img/insta-icon.svg" alt="Иконка Инстаграмма" width="21" height="21">
+        </a>
+      </li>
     </ul>
 
     <div class="social-offer">
