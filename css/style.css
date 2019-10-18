@@ -475,33 +475,7 @@ img{
   opacity: 1;
 }
 
-.filter__cost-min-input,
-.filter__cost-max-input{
-  display: inline-block;
-
-  width: 80px;
-  height: 38px;
-
-  text-align: center;
-  vertical-align: center;
-
-  border: none;
-  border-radius: 3px;
-  background-color: #eeeeee;
-}
-
-input.filter__cost-min-input::-webkit-inner-spin-button,
-input.filter__cost-max-input::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.label:focus  {
-  color: #283136;
-  opacity: 1;
-}
-
-input:disabled + label {
+filter__input:disabled + label {
   opacity: 0.3;
 }
 
@@ -518,12 +492,98 @@ input:disabled + label {
   background-color: #dfdfdf;
 }
 
+.filter__range {
+  width: 260px;
+  margin-top: 49px;
+  margin-bottom: 36px;
+}
+
+.filter__range-controls{
+  box-sizing: border-box;
+  height: 80px;
+
+  position: relative;
+
+  margin-bottom: 15px;
+  padding: 38px 20px 0px 20px;
+
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.filter__range-controls .scale{
+  height: 2px;
+  background: #d7dcde;
+}
+
+.filter__range-controls .bar{
+  width: 70%;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.toggle{
+  height: 4px;
+  width: 4px;
+  padding: 0;
+
+  position: absolute;
+  top: 29px;
+  left: 0;
+
+  cursor: pointer;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.filter__range-controls .toggle-min {
+  left: 19px;
+}
+
+.filter__range-controls .toggle-max {
+  left: 160px;
+}
+
+
 .sort__h2{
   align-self: center;
 
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.filter__price-controls{
+  font-size: 0;
+}
+
+.filter__price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.filter__price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 8px;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
 }
 
 /*-----------------------------Сетки------------------------------*/
@@ -533,7 +593,7 @@ input:disabled + label {
   justify-content: flex-end;
 
   /*Временно*/
-  min-height: 132px;
+  min-height: 131px;
 }
 
 .header__logo{
@@ -938,11 +998,6 @@ input:disabled + label {
 .row-direction{
   display: flex;
   justify-content: space-between;
-}
-
-.filter fieldset:first-of-type{
-  /*временно для сетки range*/
-  min-height: 245px;
 }
 
 .filter fieldset:first-of-type legend{

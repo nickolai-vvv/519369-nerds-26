@@ -39,16 +39,24 @@
         <fieldset>
           <legend>Стоимость:</legend>
 
-          <input type="range" name="cost" id="filter__range-cost">
-
-          <label for="filter__min-cost">ОТ</label>
-          <input class="filter__cost-min-input" type="number" value="0" name="min-cost" id="filter__min-cost">
-          <label for="filter__max-cost">ОТ</label>
-          <input class="filter__cost-max-input" type="number" value="15000" name="max-cost" id="filter__max-cost">
+          <div class="filter__range">
+            <div class="filter__range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="filter__price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+            </div>
+          </div>
         </fieldset>
 
         <fieldset>
           <legend>Сетка:</legend>
+
           <ul class="filter__grid">
             <li class="filter__option">
               <input class="visually-hidden filter__input" type="radio" name="product-group" value="adaptive" id="filter__adaptive" checked>
@@ -67,6 +75,7 @@
 
         <fieldset>
           <legend>Особенности:</legend>
+
           <ul class="filter__features">
             <li class="filter__option">
               <input class="visually-hidden filter__input" type="checkbox" name="slider" id="filter__slider" checked>
