@@ -125,7 +125,7 @@ img{
 }
 
 .advantages__img{
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 
   width: 300px;
   height: 146px;
@@ -584,6 +584,121 @@ filter__input:disabled + label {
 
 .max-price {
   text-align: right;
+}
+
+.write-us{
+  display: none;
+
+  width: 960px;
+  min-height: 590px;
+
+  position: fixed;
+  left: 50%;
+  bottom: 180px;
+  margin-left: -480px;
+  z-index: 110;
+
+  box-sizing: border-box;
+  padding: 67px 100px 84px;
+  background-color: #ffffff;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.write-us h2{
+  color: #000000;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.write-us label{
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+
+  margin-bottom: 21px;
+  margin-right: 40px;
+}
+
+.write-us__column label:nth-child(2n){
+  margin-right: 0;
+}
+
+.write-us__input{
+  display: block;
+  box-sizing: border-box;
+
+  width: 360px;
+  margin-top: 10px;
+  padding: 14px 13px;
+
+  opacity: 0.5;
+  outline: none;
+  border: 2px solid #d7dcde;
+  background-color: #ffffff;
+  color: #444444;
+  border-radius: 3px;
+}
+
+.write-us__input:focus{
+  border: 2px solid #000000;
+  opacity: 1;
+}
+
+.write-us__column{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  margin-bottom: 9px;
+}
+
+.send-message-area{
+  display: block;
+  box-sizing: border-box;
+
+  width: 760px;
+  min-height: 118px;
+
+  margin-top: 7px;
+  margin-bottom: 22px;
+  padding: 10px 13px;
+
+  resize: none;
+  border: 2px solid #d7dcde;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.write-us__button{
+  display: block;
+  padding: 16px 84px;
+}
+
+.write-us__close{
+  width: 21px;
+  height: 21px;
+
+  position: absolute;
+  top: 78px;
+  right: 90px;
+
+  background-color: transparent;
+  background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+  border: none;
+}
+
+.write-us__close:hover,
+.write-us__close:focus{
+  opacity: 1;
 }
 
 /*-----------------------------Сетки------------------------------*/
@@ -1216,8 +1331,6 @@ filter__input:disabled + label {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-
-  color: #000000;
 }
 
 .gallery__ul-pagination li > a:hover,

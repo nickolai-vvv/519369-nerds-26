@@ -198,28 +198,32 @@
   </section>
 </footer>
 
-<!--&lt;!&ndash;<section class="visually-hidden">&ndash;&gt;-->
-<!--&lt;!&ndash;  <h2>Напишите нам</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;  &lt;!&ndash;<a href="#"><img src="img/close-cross.svg" aria-label="Закрыть"></a>&ndash;&gt;&ndash;&gt;-->
+<section class="write-us">
+  <h2>Напишите нам</h2>
 
-<!--&lt;!&ndash;  <form action="https://echo.htmlacademy.ru" method="post">&ndash;&gt;-->
-<!--&lt;!&ndash;    <p>&ndash;&gt;-->
-<!--&lt;!&ndash;      <label for="send-name">Ваше имя:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;      <input type="text" name="name" id="send-name" placeholder="Имя Фамилия">&ndash;&gt;-->
-<!--&lt;!&ndash;    </p>&ndash;&gt;-->
-<!--&lt;!&ndash;    <p>&ndash;&gt;-->
-<!--&lt;!&ndash;      <label for="send-email">Ваш e-mail:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;      <input type="email" name="email" id="send-email" placeholder="email@example.com">&ndash;&gt;-->
-<!--&lt;!&ndash;    </p>&ndash;&gt;-->
-<!--&lt;!&ndash;    <p>&ndash;&gt;-->
-<!--&lt;!&ndash;      <label for="send-message">Текст письма:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;      &lt;!&ndash; можно подумать насчёт textarea!!! &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;      <input type="text" name="message" id="send-message" placeholder="В свободной форме">&ndash;&gt;-->
-<!--&lt;!&ndash;    </p>&ndash;&gt;-->
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <div class="write-us__column">
+      <label for="send-name">
+        Ваше имя:
+        <input class="write-us__input" type="text" name="name" id="send-name" placeholder="Имя Фамилия">
+      </label>
+      <label>
+        Ваш e-mail:
+        <input class="write-us__input" type="email" name="email" placeholder="email@example.com">
+      </label>
+    </div>
 
-<!--&lt;!&ndash;    <button type="submit">Отправить</button>&ndash;&gt;-->
-<!--&lt;!&ndash;  </form>&ndash;&gt;-->
-<!--&lt;!&ndash;</section>&ndash;&gt;-->
+    <label for="send-message">
+      Текст письма:
+      <textarea class="write-us__input send-message-area" name="message" id="send-message" placeholder="В свободной форме"></textarea>
+    </label>
+
+    <button class="button write-us__button" type="submit">Отправить</button>
+    <button class="write-us__close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </form>
+</section>
 
 </body>
 </html>
