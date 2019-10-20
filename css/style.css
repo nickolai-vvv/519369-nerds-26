@@ -51,6 +51,11 @@ img{
   border: 0;
 }
 
+.button-click{
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+
 .button:hover,
 .button:focus,
 .button:active {
@@ -105,18 +110,6 @@ img{
 
 .header__navigation a:active{
   color: #000000;
-}
-
-/*ужасные костыли, но зато ровно!!!!*/
-.header__navigation ul li:nth-child(3){
-  width: 71px;
-}
-.header__navigation ul li:nth-child(4){
-  letter-spacing: 0.4px;
-}
-
-.header__navigation .current {
-  /*Здесь будет создана полосочка нажатого элемента*/
 }
 
 .advantages{
@@ -564,6 +557,7 @@ filter__input:disabled + label {
   width: 50%;
 
   font-size: 16px;
+  vertical-align: bottom;
   text-transform: uppercase;
 }
 
@@ -602,6 +596,15 @@ filter__input:disabled + label {
   padding: 67px 100px 84px;
   background-color: #ffffff;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.write-us-show{
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.write-us-error{
+  animation: snake 0.6s;
 }
 
 .write-us h2{
@@ -646,6 +649,12 @@ filter__input:disabled + label {
 
 .write-us__input:focus{
   border: 2px solid #000000;
+  opacity: 1;
+}
+
+.write-us__input-error{
+  border: 2px solid #e74246;
+  color: #e74246;
   opacity: 1;
 }
 
@@ -701,6 +710,29 @@ filter__input:disabled + label {
   opacity: 1;
 }
 
+@keyframes bounce {
+  0%    { transform: translateY(4000px) }
+  70%   { transform: translateY(-30px);   }
+  90%   { transform: translateY(10px);  }
+  100%  { transform: translateY(0);      }
+}
+
+@keyframes snake {
+  0%,
+  100% { transform: translateX(0); }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% { transform: translateX(-10px); }
+
+  20%,
+  40%,
+  60%,
+  80% { transform: translateX(10px); }
+}
+
 /*-----------------------------Сетки------------------------------*/
 .header{
   display: flex;
@@ -723,6 +755,10 @@ filter__input:disabled + label {
   opacity: 0.8;
 }
 
+.header__logo-click{
+  opacity: 0.3;
+}
+
 .header__navigation{
   min-height: 83px;
   padding: 0 20px;
@@ -734,14 +770,19 @@ filter__input:disabled + label {
 }
 
 .header__navigation ul{
-  padding: 0;
-  padding-left: 2px;
-  width: 440px;
-
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
   flex-wrap: wrap;
+
+  width: 440px;
+
+  padding: 0;
+  padding-left: 2px;
+}
+
+.header__navigation ul li:not(:last-child){
+  margin-right: 46px;
 }
 
 .header__shop-busket{
@@ -824,6 +865,7 @@ filter__input:disabled + label {
   height: 18px;
   padding: 8px;
 
+  vertical-align: bottom;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -933,6 +975,7 @@ filter__input:disabled + label {
 .advantages__ul{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .advantages__ul li{
@@ -1000,6 +1043,7 @@ filter__input:disabled + label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   list-style: none;
   padding-left: 30px;
@@ -1079,6 +1123,7 @@ filter__input:disabled + label {
 .social__ul{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   width: 260px;
   padding: 0;
@@ -1086,6 +1131,10 @@ filter__input:disabled + label {
   margin-right: 138px;
 
   list-style: none;
+}
+
+.social__ul li{
+  margin-bottom: 5px;
 }
 
 .heading-wrapper-gray{

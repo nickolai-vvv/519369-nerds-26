@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <title>Дизайн-студия «Нёрдс»</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+<!--  <link href="css/style.css" rel="stylesheet">-->
+  <link href="css/minstyle.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="header">
   <nav class="header__navigation container">
-    <a class="header__logo" href="index.html">
+    <a class="header__logo" href="index.html" onclick="logoClick()">
       <img src="img/nerds-logo.svg" alt="Логотип дизайн-студии «Нёрдс»" width="160" height="65">
     </a>
     <ul>
@@ -166,9 +167,9 @@
       <a class="button map-window__button" href="#">Напишите нам</a>
     </div>
 
-    <!--img это временно. Там будет карта-->
-    <img style="display: block" src="img/map.png" alt="Карта" width="1440" height="416">
-    <img class="visually-hidden" src="img/map-marker.png" alt="Карта" width="231" height="190">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533207!2d30.320858716387423!3d59.938716481876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1571562211147!5m2!1sru!2sru" width="100%" height="416" style="border:0;"></iframe>
+<!--    <img style="display: block" src="img/map.png" alt="Карта" width="1440" height="416">-->
+<!--    <img/> class="visually-hidden" src="img/map-marker.png" alt="Карта" width="231" height="190">-->
   </section>
   <section class="social container">
     <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -209,7 +210,7 @@
       </label>
       <label>
         Ваш e-mail:
-        <input class="write-us__input" type="email" name="email" placeholder="email@example.com">
+        <input class="write-us__input" type="email" name="email" id="send-email" placeholder="email@example.com">
       </label>
     </div>
 
@@ -224,6 +225,9 @@
     </button>
   </form>
 </section>
+
+<script src="js/popup.js"></script>
+<script src="js/buttonsClick.js"></script>
 
 </body>
 </html>
