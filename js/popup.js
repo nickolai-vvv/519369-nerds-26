@@ -27,7 +27,6 @@ close.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
   if(!firstName.value || !email.value || !text.value){
     evt.preventDefault();
-
     popup.classList.remove("write-us-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("write-us-error");
