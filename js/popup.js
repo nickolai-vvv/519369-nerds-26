@@ -20,7 +20,6 @@ close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("write-us-show");
   popup.classList.remove("write-us-error");
-
 });
 
 // Обработка неверно заполненной формы popup'a.
